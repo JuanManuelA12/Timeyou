@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+<<<<<<< HEAD
 import { Link, useNavigate } from "react-router-dom";
 import { BiUser, BiUserX } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
@@ -70,10 +71,43 @@ export const Navbar = () => {
           <StyledLink2 to="/">
             Time<span>You</span>
           </StyledLink2>
+=======
+import { Link } from "react-router-dom";
+import { BsSearch } from "react-icons/bs";
+import { BiUser } from "react-icons/bi";
+import { FiShoppingCart } from "react-icons/fi";
+import { useSelector } from "react-redux";
+import { Searchbar } from "./index.js"
+
+export const Navbar = () => {
+
+
+  const cart = useSelector((state) => state.Cart);
+
+
+  const [showSearchbar, setShowSearchbar] = useState(false);
+
+  const handleSearchClick = () => {
+    setShowSearchbar(!showSearchbar);
+  };
+
+  const handleCloseSearch = () => {
+    setShowSearchbar(!!showSearchbar);
+  };
+
+  const itemCount = cart.items?.length;
+
+  return (
+    <Container itemcount={itemCount}>
+      <header className="header">
+        <h1>
+          Times<span>You</span>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
         </h1>
       </header>
       <nav className="navigation">
         <ul className="nav">
+<<<<<<< HEAD
           <li>
             <StyledLink to="/home" onClick={() => handleLinkClick("ver todo")} className={selectedLink === "ver todo" ? "selected" : ""}>
               Catálogo
@@ -133,6 +167,25 @@ export const Navbar = () => {
                   </li>
                 </ul>
               )}
+=======
+          <li>Ver todo</li>
+          <li>Casio</li>
+          <li>g-shock</li>
+          <li>mistral</li>
+          <li>prÜne</li>
+        </ul>
+        <div className="icons">
+          <ul className="icon">
+            {showSearchbar ? (
+              <Searchbar onClose={handleCloseSearch} />
+            ) : (
+              <li onClick={handleSearchClick}>
+                <BsSearch />
+              </li>
+            )}
+            <li>
+              <BiUser />
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
             </li>
             <li>
               <Link to="/shopping">
@@ -140,6 +193,7 @@ export const Navbar = () => {
                 <FiShoppingCart />
               </Link>
             </li>
+<<<<<<< HEAD
             {user.role === "admin" && (
               <li title="Dashboard">
                 <Link to="/admin/dashboard">
@@ -151,6 +205,8 @@ export const Navbar = () => {
                 </Link>
               </li>
             )}
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
           </ul>
         </div>
       </nav>
@@ -166,6 +222,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
   .header {
     width: 100%;
     height: 60px;
@@ -189,6 +249,7 @@ const Container = styled.div`
     justify-content: center;
     ul {
       list-style: none;
+<<<<<<< HEAD
       position: relative;
       li {
         text-transform: uppercase;
@@ -207,11 +268,31 @@ const Container = styled.div`
 
     .icons {
       width: 40%;
+=======
+    }
+    li {
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+    .nav {
+      margin: 0 auto;
+      width: 70%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .icons {
+      width: 30%;
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
       display: flex;
       align-items: center;
       justify-content: center;
       .icon {
+<<<<<<< HEAD
         position: relative;
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
         width: 100%;
         height: 100%;
         display: flex;
@@ -222,6 +303,7 @@ const Container = styled.div`
           font-size: 1.4rem;
           font-weight: 500;
           position: relative;
+<<<<<<< HEAD
           cursor: pointer;
           .search-conteiner {
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -300,13 +382,19 @@ const Container = styled.div`
             opacity: 1;
             z-index: 200;
           }
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
           a {
             text-decoration: none;
             color: #111;
           }
           span {
             visibility: ${(props) =>
+<<<<<<< HEAD
               props.itemCount === "0" ? "hidden" : "visible"};
+=======
+              props.itemcount === 0 ? "hidden" : "visible"};
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
             position: absolute;
             right: -10px;
             bottom: 0;
@@ -320,6 +408,7 @@ const Container = styled.div`
             justify-content: center;
             color: #fff;
           }
+<<<<<<< HEAD
           .iconImg {
             width: 30px;
             transition: 1s;
@@ -337,11 +426,14 @@ const Container = styled.div`
               transform: rotate(360deg);
             }
           }
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
         }
       }
     }
   }
 `;
+<<<<<<< HEAD
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -355,3 +447,5 @@ const StyledLink2 = styled(Link)`
   font-size: 50px;
   color: #111;
 `;
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13

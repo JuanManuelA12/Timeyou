@@ -3,11 +3,14 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 export const Card = ({ watch }) => {
+<<<<<<< HEAD
 
   if (!watch || typeof watch !== 'object') {
     return []; 
   }
   
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
   const navigate = useNavigate();
   const cleanedWatch = {};
   Object.keys(watch).forEach((key) => {
@@ -16,7 +19,11 @@ export const Card = ({ watch }) => {
   });
 
   return (
+<<<<<<< HEAD
     <Container onClick={() => navigate(`/product/${cleanedWatch.id}`)}>
+=======
+    <Container onClick={() => navigate(`/product/${cleanedWatch.model}`)}>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
       <div className="top-content">
         <span className="span-title">Envio gratis</span>
         <picture className="img-box">
@@ -26,7 +33,11 @@ export const Card = ({ watch }) => {
       <div className="section-content">
         <h3>{cleanedWatch.brandName}</h3>
         <h4>{cleanedWatch.model +' - '+ cleanedWatch.colorName}</h4>
+<<<<<<< HEAD
         <h5>${parseInt(cleanedWatch.price * 500)}</h5>
+=======
+        <h5>${cleanedWatch.price * 500}</h5>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
       </div>
     </Container>
   );
@@ -44,6 +55,7 @@ const Container = styled.article`
   overflow: hidden;
   opacity: 0.8;
   transition: 0.3s;
+<<<<<<< HEAD
   z-index: 20;
   pointer-events: all;
   cursor: pointer;
@@ -51,6 +63,12 @@ const Container = styled.article`
     transform: translateY(-1px) translateX(1px);
     opacity: 1;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+=======
+  &:hover {
+    transform: translateY(-10px) translateX(5px);
+    opacity: 1;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.8);
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
   }
   .top-content {
     width: 100%;
@@ -78,8 +96,13 @@ const Container = styled.article`
       justify-content: center;
       overflow: hidden;
       img {
+<<<<<<< HEAD
         //width: 80%;
         height: 95%;
+=======
+        width: 80%;
+        height: 80%;
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
         object-fit: cover;
       }
     }

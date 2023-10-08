@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import styled from "styled-components";
 import { CheckoutForm } from "../components/CheckoutForm";
@@ -50,3 +51,14 @@ const CheckoutContainer = styled.form`
   width: 90%;
   height: auto;
 `;
+=======
+import React from 'react'
+
+function Checkout() {
+  return (
+    <div>Checkout</div>
+  )
+}
+
+export default Checkout
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13

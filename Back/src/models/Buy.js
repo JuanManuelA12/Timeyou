@@ -11,6 +11,7 @@ module.exports = (sequelize) => {
       },
       name: {
         type: DataTypes.STRING,
+<<<<<<< HEAD
         allowNull: false,
       },
       provider: {
@@ -25,6 +26,10 @@ module.exports = (sequelize) => {
       card: {
         type: DataTypes.JSONB,
         allowNull: false,
+=======
+        unique: true,
+        alloNull: false,
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
       },
     },
     { timestamps: false }

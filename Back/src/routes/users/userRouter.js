@@ -1,4 +1,5 @@
 const express = require("express");
+<<<<<<< HEAD
 const sendEmailConPlantilla = require("../../nodemailer/sendEmailConPlantilla");
 const createUser = require("../../controllers/postUsersRegister");
 const userLogin = require("../../controllers/postLoginUser");
@@ -17,12 +18,34 @@ userRouter.post("/register", async (req, res) => {
     }
     if (newUser) res.status(200).json({ message: "user created successfully" });
   } catch (error) {
+=======
+const createUser = require("../../controllers/postUsers");
+
+const userRouter = express.Router();
+
+userRouter.post("/", async (req, res) => {
+  const { name, userName, password, email, age, phone_number, role } = req.body;
+  try {
+    const newUser = await createUser(
+      name,
+      userName,
+      password,
+      email,
+      age,
+      phone_number,
+      role
+    );
+    res.status(200).json(newUser);
+  } catch (error) {
+    console.log(error);
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
     if (error.message.includes("not available")) {
       return res.status(400).json({ Error: error.message });
     } else res.status(500).json({ Error: error.message });
   }
 });
 
+<<<<<<< HEAD
 userRouter.post("/login", async (req, res) => {
   const { userName, email, password, provider } = req.body;
   try {
@@ -71,4 +94,6 @@ userRouter.put("/update/password", async (req, res) => {
   }
 });
 
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 module.exports = userRouter;

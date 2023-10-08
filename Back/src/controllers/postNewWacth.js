@@ -1,6 +1,10 @@
 const { Watch, Brand, Function, Strap, Style, Color } = require("../db");
 
+<<<<<<< HEAD
 const createNewWatch = async ({
+=======
+const createNewWatch = async (
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
   brand,
   model,
   style,
@@ -12,12 +16,20 @@ const createNewWatch = async ({
   review,
   functions,
   description,
+<<<<<<< HEAD
   stock
 }) => {
     
     // evaluamos que recibimos los datos completos para crear el nuevo reloj
     if (!brand || !model || !style || !color || !image || !strap || !price || !gender || !functions || !description || !stock) throw new Error("missing data");
     
+=======
+) => {
+    
+    // evaluamos que recibimos los datos completos para crear el nuevo reloj
+    if (!brand || !model || !style || !color || !image || !strap || !price || !gender || !functions || !description ) throw new Error("missing data");
+  
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
     const comprobacion = await Watch.findOne({
       where: { model: model },
       include: [
@@ -43,7 +55,10 @@ const createNewWatch = async ({
       gender,
       review,
       description,
+<<<<<<< HEAD
       stock
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
     });
   
     const brandModel = await Brand.findOne({ where: { name: brand } });

@@ -1,18 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 import {
   AiOutlineInstagram,
   AiOutlineFacebook,
   AiOutlineCopyrightCircle,
+<<<<<<< HEAD
   AiOutlineTwitter,
 } from "react-icons/ai";
 
 export const Footer = () => {
   const user = useSelector((state) => state.user);
 
+=======
+} from "react-icons/ai";
+
+export const Footer = () => {
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
   return (
     <Container>
       <div className="margin">
@@ -20,6 +29,7 @@ export const Footer = () => {
           <div className="about">
             <h3 className="title">TimeYou</h3>
             <ul>
+<<<<<<< HEAD
               <StyledLink to="/sobreNosotros" target="_top">
                 sobre nosotros
               </StyledLink>
@@ -34,11 +44,19 @@ export const Footer = () => {
                   mi cuenta
                 </StyledLink>
               ) : (true))}
+=======
+              <li>sobre nosotros</li>
+              <li>contacto</li>
+              <li>trabaja con nosotros</li>
+              <li>mi cuenta</li>
+              <li>servicio tecnico</li>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
             </ul>
           </div>
           <div className="help">
             <h3 className="title">ayuda</h3>
             <ul>
+<<<<<<< HEAD
               <StyledLink to="/preguntas" target="_top">
                 preguntas frecuentes
               </StyledLink>
@@ -48,11 +66,18 @@ export const Footer = () => {
               <StyledLink to="/terminosycondiciones" target="_top">
                 Terminos & condiciones
               </StyledLink>
+=======
+              <li>preguntas frecuentes</li>
+              <li>Privacidad</li>
+              <li>manuales</li>
+              <li>Terminos & condiciones</li>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
             </ul>
           </div>
           <div className="social">
             <h3>Seguinos</h3>
             <ul>
+<<<<<<< HEAD
               <StyledLink to="https://www.facebook.com/soyhenryok/">
                 <AiOutlineFacebook size={24} />
               </StyledLink>
@@ -62,13 +87,26 @@ export const Footer = () => {
               <StyledLink to="https://twitter.com/soyhenry_ok">
                 <AiOutlineTwitter size={24}/>
               </StyledLink>
+=======
+              <li>
+                <AiOutlineFacebook />
+              </li>
+              <li>
+                <AiOutlineInstagram />
+              </li>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
             </ul>
           </div>
         </section>
         <hr />
         <section className="copy">
           <h4>
+<<<<<<< HEAD
             <span>TimeYou</span> {<AiOutlineCopyrightCircle />} 2023
+=======
+            <span>TimeYou</span> {<AiOutlineCopyrightCircle />} 2023 - Todos los
+            derechos reservados
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
           </h4>
         </section>
       </div>
@@ -78,7 +116,11 @@ export const Footer = () => {
 
 const Container = styled.footer`
   width: 100vw;
+<<<<<<< HEAD
   height: 200px;
+=======
+  height: 350px;
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
   background-color: #111;
   display: flex;
   flex-direction: column;
@@ -94,7 +136,11 @@ const Container = styled.footer`
     margin: 0 auto;
     .media {
       width: 100%;
+<<<<<<< HEAD
       height: 200px;
+=======
+      height: 300px;
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
       display: flex;
       align-items: center;
       .about,
@@ -155,11 +201,18 @@ const Container = styled.footer`
     }
     .copy {
       width: 100%;
+<<<<<<< HEAD
       height: 25px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       margin-bottom: 30px;
+=======
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
       h4 {
         font-size: 0.8rem;
         color: #fff;
@@ -172,9 +225,12 @@ const Container = styled.footer`
     }
   }
 `;
+<<<<<<< HEAD
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: bolder;
   font-size: 15px;
   color: #faf9f9;
 `;
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13

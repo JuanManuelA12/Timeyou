@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export const getCartItemsCount = () => {
@@ -61,3 +62,13 @@ export const validateInputNewPass = (input) => {
 
 
 
+=======
+export const getCartItemsCount = () => {
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+      const cart = JSON.parse(storedCart);
+      return cart.items.length;
+    }
+    return 0;
+  };
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13

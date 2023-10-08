@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import MyRoutes from "./routes/MyRoutes";
@@ -86,6 +87,26 @@ function App() {
       <MyRoutes />
     </div>
   );
+=======
+
+import { useEffect } from "react";
+import MyRoutes from "./routes/MyRoutes";
+import { useDispatch } from "react-redux";
+import { allPropWatches } from "./redux/Actions";
+
+function App() {
+  const dispatch = useDispatch()
+  
+  useEffect(()=>{
+  dispatch(allPropWatches('brands'))
+  dispatch(allPropWatches('styles'))
+  dispatch(allPropWatches('colors'))
+  dispatch(allPropWatches('straps'))
+  dispatch(allPropWatches('functions'))
+  },[dispatch])
+  
+  return <MyRoutes/>;
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 }
 
 export default App;

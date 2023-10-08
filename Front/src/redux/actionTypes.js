@@ -3,15 +3,22 @@ export const GET_PRODUCTS_DETAIL = "GET_PRODUCTS_DETAIL";
 export const RESET_DETAIL = "RESET_DETAIL";
 
 //funciones de carrito de compras
+<<<<<<< HEAD
 export const SET_CART = "SET_CART";
 export const UPDATE_CART = "UPDATE_CART";
+=======
+
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const CLEAR_CART = "CLEAR_CART";
 export const TOTAL_PRICE = "TOTAL_PRICE";
 export const UPDATE_PRICE = "UPDATE_PRICE";
+<<<<<<< HEAD
 export const FINISH_BUY_CLEAR_CART = "FINISH_BUY_CLEAR_CART";
 
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 //Searchbar
 export const SEARCH_PRODUCT_REQUEST = "SEARCH_PRODUCT_REQUEST";
 export const SEARCH_PRODUCT_SUCCESS = "SEARCH_PRODUCT_SUCCESS";
@@ -19,12 +26,15 @@ export const SEARCH_PRODUCT_FAILURE = "SEARCH_PRODUCT_FAILURE";
 
 //Filters
 export const FILTERS = "FILTERS";
+<<<<<<< HEAD
 export const UPDATE_SELECTED_CATEGORIES = "UPDATE_SELECTED_CATEGORIES";
 export const GET_BRANDS = "GET_BRANDS";
 export const GET_STYLES = "GET_STYLES";
 export const GET_STRAPS = "GET_STRAPS";
 export const GET_COLORS = "GET_COLORS";
 export const GET_FUNCTIONS = "GET_FUNCTIONS";
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 
 //todos los datos de las tablas
 export const ALL_BRANDS = "ALL_BRANDS";
@@ -36,6 +46,7 @@ export const ALL_FUNCTIONS = "ALL_FUNCTIONS";
 //post watch
 export const POST_WATCH = "POST_WATCH";
 
+<<<<<<< HEAD
 //crear usuarios
 
 export const CREATE_USER = "CREATE_USER";
@@ -63,3 +74,6 @@ export const CREATE_COMMENT_FAILURE = "CREATE_COMMENT_FAILURE";
 export const GET_USER_LOGGED = "GET_USER_LOGGED";
 
 export const UPDATE_USERNAME = "UPDATE_USERNAME";
+=======
+
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13

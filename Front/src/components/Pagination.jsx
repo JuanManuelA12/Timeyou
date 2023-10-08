@@ -7,7 +7,11 @@ export const Pagination = ({ totalPages, page, onPrev, onNext }) => {
   return (
     <Container>
       {page > 1 && (
+<<<<<<< HEAD
         <AppendBTN onClick={onPrev} alter="false">
+=======
+        <AppendBTN onClick={onPrev}>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
           <AiOutlineLeft />
         </AppendBTN>
       )}
@@ -15,7 +19,11 @@ export const Pagination = ({ totalPages, page, onPrev, onNext }) => {
         {page} de {totalPages}
       </h4>
       {page !== totalPages && (
+<<<<<<< HEAD
         <AppendBTN onClick={onNext} alter="false">
+=======
+        <AppendBTN onClick={onNext}>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
           <AiOutlineRight />
         </AppendBTN>
       )}

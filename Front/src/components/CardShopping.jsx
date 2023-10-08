@@ -1,26 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 import { AppendBTN } from "../utils/ComponentsStyle";
+<<<<<<< HEAD
 import { addToCart, removeFromCart } from "../redux/Actions";
+=======
+import { removeFromCart } from "../redux/Actions";
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 import { useDispatch } from "react-redux";
 
 export const CardShopping = ({reloj}) => {
 const dispatch = useDispatch()
+<<<<<<< HEAD
 
   const handleRemove =() =>{
     dispatch(removeFromCart(reloj.id))
   }
   
   
+=======
+  const handleRemove =() =>{
+    dispatch(removeFromCart(reloj.id))
+  }
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
   return (
     <Container>
       <div className="section-card">
         <div className="top-content">
           <picture className="img-box">
+<<<<<<< HEAD
          {   <img
               src={reloj.image[0]}
               alt={reloj.name}
             />}
+=======
+            <img
+              src={reloj.image[0]}
+              alt={reloj.name}
+            />
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
           </picture>
           <div className="marca-modelo">
             <h5>{reloj.brandName}</h5>
@@ -31,6 +48,7 @@ const dispatch = useDispatch()
         <section className="content">
           <h4>${reloj.price * 500}</h4>
           <div className="inputs">
+<<<<<<< HEAD
             <AppendBTN
               onClick={()=>dispatch(addToCart(reloj, -1))}
               alter="true">-</AppendBTN>
@@ -43,6 +61,15 @@ const dispatch = useDispatch()
         <div className="clear">
           {reloj.quantity <= 0 && handleRemove() }
           <AppendBTN alter="true" onClick={handleRemove}>X</AppendBTN>
+=======
+            <AppendBTN alter>+</AppendBTN>
+            <span className="visor">1</span>
+            <AppendBTN alter>-</AppendBTN>
+          </div>
+        </section>
+        <div className="clear">
+          <AppendBTN alter onClick={handleRemove}>X</AppendBTN>
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
         </div>
       </div>
     </Container>

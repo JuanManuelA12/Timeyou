@@ -1,11 +1,15 @@
 const express = require("express");
+<<<<<<< HEAD
 require("dotenv").config();
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 //const cookieParser = require("cookie-parser");
 //const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const router = require("./routes/index");
 require("./db.js");
 const server = express();
+<<<<<<< HEAD
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const session = require("express-session");
@@ -67,6 +71,12 @@ passport.deserializeUser((user, done) => {
 server.use(passport.initialize());
 // server.use(passport.session());
 
+=======
+
+//server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
+//server.use(bodyParser.json({ limit: "50mb" }));
+//server.use(cookieParser());
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 server.use(express.json());
 server.use(morgan("dev"));
 server.use((req, res, next) => {
@@ -80,10 +90,13 @@ server.use((req, res, next) => {
   next();
 });
 
+<<<<<<< HEAD
 // ESTO DEBE SER UNA VARIABLE DE ENTORNO EN PRODUCCION "NO OLVIDAR"
 mercadopago.configure({
   access_token: MERCADO_PAGO,
 });
+=======
+>>>>>>> 31df1755a4c1a1e8dbfdb85b13bc3736822d6d13
 server.use("/", router);
 
 server.use((err, req, res, next) => {
